@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Urban Heat Island 101</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #f97316;
+      --accent-soft: #fb923c;
+      --good: #22c55e;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--text);
+      background: radial-gradient(circle at 20% 0%, #1e293b 0%, var(--bg) 45%), var(--bg);
+      line-height: 1.65;
+    }
+
+    .wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1rem 4rem;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, rgba(249, 115, 22, 0.2), rgba(251, 146, 60, 0.08));
+      border: 1px solid rgba(251, 146, 60, 0.35);
+      border-radius: 18px;
+      padding: 2rem;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      margin: 0 0 0.75rem;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      line-height: 1.15;
+    }
+
+    h2 {
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      font-size: 1.3rem;
+      color: #fde68a;
+    }
+
+    p { margin: 0.6rem 0; }
+    .muted { color: var(--muted); }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 1.2rem;
+    }
+
+    .card {
+      background: rgba(17, 24, 39, 0.8);
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      border-radius: 14px;
+      padding: 1rem;
+    }
+
+    .fact {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--accent-soft);
+      margin-bottom: 0.25rem;
+    }
+
+    ul {
+      padding-left: 1.1rem;
+      margin-top: 0.5rem;
+    }
+
+    a {
+      color: #7dd3fc;
+      text-underline-offset: 3px;
+    }
+
+    .cta {
+      margin-top: 2rem;
+      border-left: 4px solid var(--good);
+      padding: 0.8rem 1rem;
+      background: rgba(34, 197, 94, 0.08);
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <h1>Urban Heat Island: Why Cities Feel Hotter Than You Expect</h1>
+      <p>
+        Ever notice how city streets stay hot even after sunset? That is the <strong>Urban Heat Island (UHI)</strong> effect:
+        urban areas become significantly warmer than nearby rural zones.
+      </p>
+      <p class="muted">
+        For a lot of us in our 20s, this is not just climate news—it affects sleep quality, commuting comfort,
+        sports, mental focus, electricity bills, and long-term public health.
+      </p>
+    </section>
+
+    <section>
+      <h2>What causes it?</h2>
+      <div class="grid">
+        <article class="card">
+          <div class="fact">Dark Surfaces</div>
+          <p>Asphalt and concrete absorb solar energy during the day and slowly release it at night.</p>
+        </article>
+        <article class="card">
+          <div class="fact">Less Green</div>
+          <p>Fewer trees means less shade and weaker evaporative cooling from plants.</p>
+        </article>
+        <article class="card">
+          <div class="fact">Human Heat</div>
+          <p>Cars, air conditioners, buildings, and industry all emit extra heat into the local environment.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Why it matters (beyond discomfort)</h2>
+      <ul>
+        <li><strong>Health risk:</strong> Higher nighttime temperatures increase heat stress and reduce recovery time.</li>
+        <li><strong>Energy burden:</strong> More cooling demand means higher electricity costs and peak-grid pressure.</li>
+        <li><strong>Equity issue:</strong> Hotspots often overlap with lower-income neighborhoods with less tree cover.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Urban analytics depth: how we actually measure UHI</h2>
+      <p>
+        Planners and urban analysts usually combine <strong>satellite land-surface temperature</strong> with
+        <strong>ground weather stations</strong>, then map heat at neighborhood scale.
+      </p>
+      <p>
+        A common workflow: identify extreme-heat blocks, compare with land cover and social vulnerability,
+        then prioritize interventions where both heat exposure and social risk are high.
+      </p>
+    </section>
+
+    <section>
+      <h2>What can cities (and students) do?</h2>
+      <div class="grid">
+        <article class="card"><strong>Cool roofs</strong><br/>Reflective materials lower building heat gain.</article>
+        <article class="card"><strong>Tree corridors</strong><br/>Shade major walking routes, transit stops, and campuses.</article>
+        <article class="card"><strong>Permeable + lighter pavements</strong><br/>Reduce heat storage and improve rainwater handling.</article>
+      </div>
+      <p class="cta">
+        Action starts local: map a hot route you use daily and propose one cooling intervention—this is urban planning in practice.
+      </p>
+    </section>
+
+    <section>
+      <h2>Learn more</h2>
+      <p>
+        World Health Organization on heat and health:
+        <a href="https://www.who.int/news-room/fact-sheets/detail/climate-change-heat-and-health" target="_blank" rel="noopener noreferrer">WHO Fact Sheet</a>
+      </p>
+    </section>
+  </main>
+</body>
+</html>
